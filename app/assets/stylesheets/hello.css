@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: grid!important;
+  margin: 15px;
 }
 
 code {
@@ -36,10 +38,296 @@ code {
   color: #61dafb;
 }
 
-.heart {
-  color: #ff0000;
-}
 
 .small {
   font-size: 0.75rem;
+}
+
+
+.naglowek{
+  text-align: center;
+  margin-top: -20px;
+  font-size: 50px;
+  padding: 150px;
+  color: white;
+  background: url("https://4kwallpapers.com/images/walls/thumbs_3t/4523.jpg");
+  text-shadow: 3px 3px 2px black;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #000;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  position: relative;
+  float: both;
+}
+
+.content h2 {
+  color: #fff;
+  font-size: 6em;
+  position: absolute;
+  transform: translate(-20%, -120%);
+}
+
+.content h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #03a9f4;
+}
+
+.content h2:nth-child(2) {
+  color: #03a9f4;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+
+
+/* Custom CSS stron */
+.menu{
+  color: white;
+  margin-bottom: 200px;
+  width: 100%;
+}
+.block-menu{
+  margin-top: 15%;
+}
+
+h2, h1, p{
+  color: white;
+}
+
+
+
+header{
+  position: fixed;
+  margin-top: -35%;
+  margin-left: 42%;
+}
+
+header li {
+  float: left;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 20px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+header li a {
+  color: white;
+  text-decoration: none;
+}
+
+.edit-button a{
+  color: rgb(255, 60, 69)!important;
+  font-size: 28px;
+  text-decoration: none;
+}
+
+.admin-panel-text{
+  font-size: 28px;
+}
+
+
+#article_title, #article_body{
+  background: rgba(255,255,255,.1);
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  margin: 0;
+  outline: 0;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background-color: #e8eeef;
+  color: #000000;
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+}
+
+.submit-article input{
+  padding: 20px;
+  display: flex;
+  background: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  border-radius: 10px;
+  transition-duration:1s;
+}
+
+.submit-article input:hover{
+  padding: 20px;
+  display: flex;
+  background: rgba(22,22,22,1);
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.our-localization{
+  margin-top: 10px;
+  font-size: 28px;
+  margin-left: 25px;
+  padding-bottom: 30px;
+}
+
+/* Koniec custom CSS strony */
+
+
+
+
+
+
+
+
+
+
+
+
+/*Underline pozycji menu */
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #03a9f4;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #03a9f4;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/*Czerwony underline*/
+
+.hover-underline-animation-second {
+  display: inline-block;
+  position: relative;
+  color: rgb(255, 60, 69);
+  margin-left: 30px;
+}
+.hover-underline-animation-second:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(255, 60, 69);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation-second:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+/* Koniec underline pozycji menu*/
+
+/*Artykuly: */
+.container{
+  margin-top: 15%;
+}
+
+.container a {
+  padding: 20px;
+  display: flex;
+  background: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  border-radius: 10px;
+  transition-duration:1s;
+}
+
+.container a:hover{
+  padding: 20px;
+  display: flex;
+  background: rgba(22,22,22,1);
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+hr{margin-top: 30px; margin-bottom: 30px;}
+
+.article-header{
+  text-align: center;
+  margin-top: 10%;
+  margin-left: 15%;
+}
+
+.article-text{
+  text-align: justify;
+  width: 70%;
+  margin-left: 15%;
 }

@@ -1,3 +1,15 @@
 Rails.application.routes.draw do
-  root "hello#index"
+  namespace :admin do
+      resources :comments
+      resources :articles
+
+      root to: "comments#index"
+    end
+  get 'about', to: 'pages#about', as: 'about'
+
+  root "articles#index"
+
+  resources :articles do
+    resources :comments
+  end
 end

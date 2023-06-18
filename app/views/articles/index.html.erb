@@ -1,0 +1,48 @@
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+   <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+   function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
+ </script>
+</head>
+<body>
+
+<header>
+<div>
+<ul class="menu">
+  <li>
+  <p class="hover-underline-animation">
+    <%= link_to 'Home', root_path %>
+  </p>
+  </li>
+  <li>
+  <p class="hover-underline-animation">
+    <%= link_to 'About Us', about_path %>
+  </p>
+  </li>
+</ul>
+</div>
+
+<div class="content">
+    <h2>Home</h2>
+    <h2>Home</h2>
+</div>
+</header>
+
+
+<div class="container">
+<ul>
+  <% @articles.each do |article| %>
+    <% unless article.archived? %>
+      <li>
+        <%= link_to article.title, article %>
+      </li>
+    <% end %>
+  <% end %>
+</ul> 
+</div>
+</body>

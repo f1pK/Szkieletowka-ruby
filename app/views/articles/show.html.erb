@@ -1,0 +1,30 @@
+
+
+<div class="content article-header">
+  <h2><%= @article.title %></h2>
+  <h2><%= @article.title %></h2>
+</div>
+
+<p class="article-text"><%= @article.body %></p>
+<hr>
+
+
+
+<h2>Comments</h2>
+<%= render @article.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+
+<hr>
+
+
+<p class="admin-panel-text"> 🛠️ Admin panel</p>
+<ul>
+  <li class="edit-button hover-underline-animation-second"><%= link_to "Edit", edit_article_path(@article) %></li>
+  <li class="edit-button hover-underline-animation-second "><%= link_to "Destroy", article_path(@article), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>
